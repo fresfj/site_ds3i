@@ -50,8 +50,8 @@
     "build-dev": "webpack",
     "build-web": "cross-env NODE_ENV=production webpack",
     "start-web": "cross-env SERVE=true webpack serve",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -76,6 +76,7 @@
   "devDependencies": {
     "@types/loadable__component": "^5.13.4",
     "@types/react-lazyload": "^3.2.0",
+    "cross-env": "^7.0.3",
     "react-image-webp": "^0.8.0",
     "react-loadable": "^5.5.0",
     "sw-precache-webpack-plugin": "^1.0.0"

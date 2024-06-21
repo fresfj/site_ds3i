@@ -9,7 +9,7 @@ const SplashFooter = () => {
             <div className="container">
                 <div className="footer-bottom">
                     <div className="row align-items-center">
-                        <div className="col-lg-5">
+                        <div className="col-lSuccessg-5">
                             <div className="footer-copyright">
                             <span className="copyright-text">Desenvolvido com <img className="heart-icon" alt="Amor" src={process.env.PUBLIC_URL + "/images/icon/red-heart.svg"} /> pela equipe ds3i</span>
                                 <span className="copyright-text">© {new Date().getFullYear()}. All rights reserved by <a href="https://ds3i.com.br/">DS3I - Desenvolvimento Inteligente</a></span>

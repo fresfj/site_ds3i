@@ -1,35 +1,63 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import FooterOne from '../common/footer/FooterOne';
-import HeaderOne from '../common/header/HeaderOne';
-import CtaLayoutOne from '../component/cta/CtaLayoutOne';
-import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
-import SEO from '../common/SEO';
-import LazyLoad from 'react-lazyload';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import FooterOne from '../common/footer/FooterOne'
+import HeaderOne from '../common/header/HeaderOne'
+import CtaLayoutOne from '../component/cta/CtaLayoutOne'
+import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne'
+import ColorSwitcher from '../elements/switcher/ColorSwitcher'
+import SEO from '../common/SEO'
+import LazyLoad from 'react-lazyload'
 
 const PrivacyPolicy = () => {
+  return (
+    <>
+      <SEO title="Política de Privacidade" />
+      <ColorSwitcher />
+      <main className="main-wrapper">
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <HeaderOne />
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <BreadCrumbOne
+            title="Política de Privacidade"
+            page="Política de Privacidade"
+          />
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <div className="section-padding privacy-policy-area">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-10">
+                  <div className="privacy-policy-content">
+                    <div className="section-title">
+                      <h5 className="title">
+                        Esta política de privacidade foi publicada em 20 de
+                        Junho de 2022.
+                      </h5>
+                    </div>
+                    <p className="mb--20">
+                      A sua privacidade é importante para nós. É nossa política
+                      respeitar a sua privacidade em relação a qualquer
+                      informação sua que possamos coletar em nosso site, e
+                      outros sites que possuímos e operamos.
+                    </p>
+                    <p className="mb--20">
+                      Por esse motivo, respeitamos todas as normas e regras
+                      estabelecidas pelas legislações que buscam proteger os
+                      dados pessoais, principalmente a{' '}
+                      <a
+                        title="Lei 13.709/18"
+                        target={'_blank'}
+                        href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+                      >
+                        Lei 13.709/18
+                      </a>
+                      , bem como, utilizamos as técnicas de segurança mais
+                      adequadas para todas as etapas de tratamentos que
+                      realizamos com as informações coletadas em nosso site.
+                    </p>
 
-    return (
-        <>
-            <SEO title="Política de Privacidade" />
-            <ColorSwitcher />
-            <main className="main-wrapper">
-            <LazyLoad height={200} offset={[-100, 0]} once ><HeaderOne /></LazyLoad>
-            <LazyLoad height={200} offset={[-100, 0]} once ><BreadCrumbOne title="Política de Privacidade" page="Política de Privacidade"/></LazyLoad>
-            <LazyLoad height={200} offset={[-100, 0]} once >
-                <div className="section-padding privacy-policy-area">
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-10">
-                                <div className="privacy-policy-content">
-                                <div className="section-title">
-                                    <h5 className="title">Esta política de privacidade foi publicada em 20 de Junho de 2022.</h5>
-                                </div>
-                                <p className="mb--20">A sua privacidade é importante para nós. É nossa política respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar em nosso site, e outros sites que possuímos e operamos.</p>
-                                <p className="mb--20">Por esse motivo, respeitamos todas as normas e regras estabelecidas pelas legislações que buscam proteger os dados pessoais, principalmente a <a title='Lei 13.709/18' target={'_blank'} href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">Lei 13.709/18</a>, bem como, utilizamos as técnicas de segurança mais adequadas para todas as etapas de tratamentos que realizamos com as informações coletadas em nosso site.</p>
-
-                                <p className="mb--20">Em busca de sermos transparentes e em respeito a todos os visitantes/usuários do nosso site, apresentamos este documento, denominado Politica de Privacidade e Segurança do <Link to={process.env.PUBLIC_URL+'/'}>https://ds3i.com.br/</Link></p>
+                    {/* <p className="mb--20">Em busca de sermos transparentes e em respeito a todos os visitantes/usuários do nosso site, apresentamos este documento, denominado Politica de Privacidade e Segurança do <Link to={process.env.PUBLIC_URL+'/'}>https://ds3i.com.br/</Link></p>
 
                                 <p className="mb--20">Este documento é vinculado e integra as <Link to={process.env.PUBLIC_URL+ "/terms-use/"}>Condições e Termos de Uso</Link> deste site, assim como os demais documentos que versam sobre os tratamentos de dados que podem ser encontrados em nossas plataformas, passível de alteração a qualquer momento para adequação as regras estabelecidas pelas legislações que estabelecem o modo de tratamento dos dados.</p> 
                                 <p className="mb--20">Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um produto ou serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
@@ -142,20 +170,30 @@ const PrivacyPolicy = () => {
                                 <h4 className="mb--20">Aceite da Política de Privacidade</h4>
                                 <p className="mb--20">É muito bom saber que Você chegou até aqui!</p>
                                 <p className="mb--20">Agora que Você tem todas as informações necessárias, só precisa entender que ao aceitar nossa política de privacidade, Você declara ter capacidade legal, dando o seu consentimento expresso para tudo que foi apresentado nela.</p>
-                                <p className="mb--20">Caso Você ainda não tenha completado seus 12 (doze) anos de idade, não esqueça de pedir ajuda para o papai ou para a mamãe para concordar com a nossa Política de Privacidade.</p>
-                                <p className="mb--20">Agradecemos por chegar até aqui! Dúvidas ou considerações, manda um e-mail para dpo@ds3i.com.br ou até pode mandar no chat do nosso site, que responderemos o quanto antes!</p>
-                                <p className="mb--20">Atenciosamente, equipe de Desenvolvimento da DS3I.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                <p className="mb--20">Caso Você ainda não tenha completado seus 12 (doze) anos de idade, não esqueça de pedir ajuda para o papai ou para a mamãe para concordar com a nossa Política de Privacidade.</p> */}
+                    <p className="mb--20">
+                      Agradecemos por chegar até aqui! Dúvidas ou considerações,
+                      manda um e-mail para dpo@ds3i.com.br ou até pode mandar no
+                      chat do nosso site, que responderemos o quanto antes!
+                    </p>
+                    <p className="mb--20">
+                      Atenciosamente, equipe de Desenvolvimento da DS3I.
+                    </p>
+                  </div>
                 </div>
-                </LazyLoad>
-                <LazyLoad height={200} offset={[-100, 0]} once ><CtaLayoutOne /></LazyLoad>
-                <LazyLoad height={200} offset={[-100, 0]} once ><FooterOne parentClass="" /></LazyLoad>
-            </main>
-        </>
-    )
+              </div>
+            </div>
+          </div>
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <CtaLayoutOne />
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <FooterOne parentClass="" />
+        </LazyLoad>
+      </main>
+    </>
+  )
 }
 
-export default PrivacyPolicy;
+export default PrivacyPolicy

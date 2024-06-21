@@ -1,34 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import FooterOne from '../common/footer/FooterOne';
-import HeaderOne from '../common/header/HeaderOne';
-import CtaLayoutOne from '../component/cta/CtaLayoutOne';
-import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne';
-import ColorSwitcher from '../elements/switcher/ColorSwitcher';
-import SEO from '../common/SEO';
-import LazyLoad from 'react-lazyload';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import FooterOne from '../common/footer/FooterOne'
+import HeaderOne from '../common/header/HeaderOne'
+import CtaLayoutOne from '../component/cta/CtaLayoutOne'
+import BreadCrumbOne from '../elements/breadcrumb/BreadCrumbOne'
+import ColorSwitcher from '../elements/switcher/ColorSwitcher'
+import SEO from '../common/SEO'
+import LazyLoad from 'react-lazyload'
 
 const TermsOfUse = () => {
+  return (
+    <>
+      <SEO title="Termos de Uso" />
+      <ColorSwitcher />
+      <main className="main-wrapper">
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <HeaderOne />
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <BreadCrumbOne title="Termos de Uso" page="Termos de Uso" />
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <div className="section-padding privacy-policy-area">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-10">
+                  <div className="privacy-policy-content">
+                    <div className="section-title">
+                      <h5 className="title">
+                        Este termos de uso foi publicada em 21 de Junho de 2022.
+                      </h5>
+                    </div>
+                    <p className="mb--20">
+                      Seja bem-vindo ao nosso site. Leia com atenção todos os
+                      termos abaixo.
+                    </p>
 
-    return (
-        <>
-            <SEO title="Termos de Uso" />
-            <ColorSwitcher />
-            <main className="main-wrapper">
-            <LazyLoad height={200} offset={[-100, 0]} once ><HeaderOne /></LazyLoad>
-            <LazyLoad height={200} offset={[-100, 0]} once ><BreadCrumbOne title="Termos de Uso" page="Termos de Uso"/></LazyLoad>
-            <LazyLoad height={200} offset={[-100, 0]} once >
-                <div className="section-padding privacy-policy-area">
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-10">
-                                <div className="privacy-policy-content">
-                                <div className="section-title">
-                                    <h5 className="title">Este termos de uso foi publicada em 21 de Junho de 2022.</h5>
-                                </div>
-                                <p className="mb--20">Seja bem-vindo ao nosso site. Leia com atenção todos os termos abaixo.</p>
-
-                                <p className="mb--20">Este documento, e todo o conteúdo do site é oferecido por DS3I Desenvolvimento de Aplicativos e Sites, neste termo representado apenas por “EMPRESA”, que regulamenta todos os direitos e obrigações com todos que acessam o site, denominado neste termo como “VISITANTE”, reguardado todos os direitos previstos na legislação, trazem as cláusulas abaixo como requisito para acesso e visita do mesmo, situado no endereço <Link to={process.env.PUBLIC_URL+'/'}>https://ds3i.com.br/</Link>.</p>
+                    {/* <p className="mb--20">Este documento, e todo o conteúdo do site é oferecido por DS3I Desenvolvimento de Aplicativos e Sites, neste termo representado apenas por “EMPRESA”, que regulamenta todos os direitos e obrigações com todos que acessam o site, denominado neste termo como “VISITANTE”, reguardado todos os direitos previstos na legislação, trazem as cláusulas abaixo como requisito para acesso e visita do mesmo, situado no endereço <Link to={process.env.PUBLIC_URL+'/'}>https://ds3i.com.br/</Link>.</p>
 
                                 <p>A permanência no website implica-se automaticamente na leitura e aceitação tácita do presente termos de uso a seguir. Este termo foi atualizado pela última vez em 21 de Junho de 2022.</p>
                                 <h4>1. DA FUNÇÃO DO SITE</h4>
@@ -103,20 +111,27 @@ const TermsOfUse = () => {
 
                                 <p className="mb--20">Apesar da EMPRESA apenas criar links para sites externos de extrema confiança, caso o usuário acesse um site externo, a EMPRESA não tem nenhuma responsabilidade pelo meio, sendo uma mera indicação de complementação de conteúdo, ficando o mesmo responsável pelo acesso, assim como sobre quaisquer ações que venham a realizar neste site.</p>
 
-                                <p className="mb--20">Em caso que ocorra eventuais conflitos judiciais entre o VISITANTE e a EMPRESA, o foro elegido para a devida ação será o da comarca da Empresa, mesmo que haja outro mais privilegiado.</p>
+                                <p className="mb--20">Em caso que ocorra eventuais conflitos judiciais entre o VISITANTE e a EMPRESA, o foro elegido para a devida ação será o da comarca da Empresa, mesmo que haja outro mais privilegiado.</p> */}
 
-                                <p>Este Termo de uso é valido a partir de 21 de Junho de 2022.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p>
+                      Este Termo de uso é valido a partir de 21 de Junho de
+                      2022.
+                    </p>
+                  </div>
                 </div>
-                </LazyLoad>
-                <LazyLoad height={200} offset={[-100, 0]} once ><CtaLayoutOne /></LazyLoad>
-                <LazyLoad height={200} offset={[-100, 0]} once ><FooterOne parentClass="" /></LazyLoad>
-            </main>
-        </>
-    )
+              </div>
+            </div>
+          </div>
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <CtaLayoutOne />
+        </LazyLoad>
+        <LazyLoad height={200} offset={[-100, 0]} once>
+          <FooterOne parentClass="" />
+        </LazyLoad>
+      </main>
+    </>
+  )
 }
 
-export default TermsOfUse;
+export default TermsOfUse
