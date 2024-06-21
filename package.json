@@ -50,8 +50,8 @@
     "build-dev": "webpack",
     "build-web": "cross-env NODE_ENV=production webpack",
     "start-web": "cross-env SERVE=true webpack serve",
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
