@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import HeaderOne from '../common/header/HeaderOne';
 import SEO from '../common/SEO';
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
-import { motion } from "framer-motion/dist/framer-motion"
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 const ErrorPage = () => {
 
     return (
@@ -16,29 +17,21 @@ const ErrorPage = () => {
                     <div className="container">
                         <div className="row align-items-center">
                         <div className="col-lg-6">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.4 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                        >
+                        <AnimationOnScroll  animateIn="slideInUp" duration={1} delay={300} animateOnce={true}>
                             <div className="content">
                                 <h1 className="title">Page not found</h1>
                                 <h4 className="subtitle">Não se assuste.</h4>
                                 <p>A página que você está procurando caiu em um reino desconhecido. Clique no botão abaixo para voltar à página inicial.</p>
                                 <Link to={process.env.PUBLIC_URL + "/"} className="axil-btn btn-fill-primary">Voltar para o conhecido</Link>
                             </div>
-                        </motion.div>
+                        </AnimationOnScroll>
                         </div>
                         <div className="col-lg-6">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.4 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                        >
+                        <AnimationOnScroll  animateIn="zoomIn" duration={1} delay={300} animateOnce={true}>
                             <div className="thumbnail">
                                 <img src={process.env.PUBLIC_URL + "/images/others/404.png"} alt="404" />
                             </div>
-                        </motion.div>
+                        </AnimationOnScroll>
                         </div>
                         </div>
                     </div>
